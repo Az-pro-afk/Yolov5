@@ -243,20 +243,6 @@ if __name__ == "__main__":
     classes = None
     with open(classesFile, 'rt') as f:
         classes = f.read().rstrip('\n').split('\n')
-
-    #modelWeights = "D:/model/Model_Yolov5n_06_09_2024/runs/train/yolov5n_results/weights/best.onnx" # confidence = 0.7 k thể detect được cá hướng ra, 0.4 - 0.6 -> chấp nhận được
-    #modelWeights = "D:/model/Model_Yolov5n_06_09_2024/runs/train/yolov5n_results/weights/last.onnx" #để conf = 0.5 chắc ổn r
-
-    #modelWeights = "D:/model/Model_Yolov5n_06_09_2024/runs/train/yolov5n_results_3pm/weights/best.onnx"
-    #modelWeights = "D:/model/Model_Yolov5n_06_09_2024/runs/train/yolov5n_results_3pm/weights/last.onnx"
-
-    #modelWeights = "D:/model/Model_Yolov5n_06_09_2024/runs/train/yolov5s_results_10b_13e_07_09_2024/weights/best.onnx" # không đc cá hướng ra dù conf = 0.5
-    #modelWeights = "D:/model/Model_Yolov5n_06_09_2024/runs/train/yolov5s_results_10b_13e_07_09_2024/weights/last.onnx" #same problem above
-
-    #modelWeights = "D:/model/Model_Yolov5n_06_09_2024/runs/train4pm12/yolov5n_results/weights/best.onnx"        # ổn với conf 0.6 -> chấp nhận được
-    #modelWeights = "D:/model/Model_Yolov5n_06_09_2024/runs/train4pm12/yolov5n_results/weights/last.onnx"
-
-    #modelWeights = "D:/model/Model_Yolov5s_10_09_2024/runs_4/train/yolov5s_results2/weights/last.onnx"  #ổn
     modelWeights = "D:/model/Model_Yolov5s_10_09_2024/runs_5/train/yolov5s_results/weights/last.onnx"
     net = cv2.dnn.readNet(modelWeights)
     
